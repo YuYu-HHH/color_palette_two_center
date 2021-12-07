@@ -121,7 +121,7 @@ def Get_Palette_by_Two_center(filename):
             weight_2.append(weights[index]);
         weights_2.append(weight_2);
 
-
+    
 
 
 
