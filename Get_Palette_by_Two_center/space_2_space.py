@@ -19,6 +19,7 @@ def rgbs_2_hsvs(rgbs):
         hsvs[i] = hsv;
     return hsvs;
 def rgb_2_hs(rgb):
+    print(rgb)
     RGB = sRGBColor(rgb[0], rgb[1], rgb[2], is_upscaled=True);
     HSV = convert_color(RGB, HSVColor);
 
