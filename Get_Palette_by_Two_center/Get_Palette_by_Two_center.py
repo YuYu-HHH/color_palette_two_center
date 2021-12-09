@@ -32,6 +32,9 @@ def Get_Palette_by_Two_center(filename, save_Path):
         file_handle.write(str(weights))
         file_handle.write('\n')
     for i in range(3):
+        print("555555555555555555555555555555555555555555")
+        print(len(palette_rgb))
+        print(len(weights))
         palette_rgb, weights = Get_Palette_(palette_rgb,weights,save_Path, i);
 
 
@@ -45,7 +48,7 @@ def Get_Palette_(palette_rgb,weights,save_Path, t):
         palette_l[i] = rgb_2_lab_l(palette_rgb[i]);
 
     # 将palette按照L的大小分为  明暗  两部分。
-    print(palette_l)
+
     palette_one = [];
     palette_two = [];
     palette_one_lab = [];
@@ -53,12 +56,12 @@ def Get_Palette_(palette_rgb,weights,save_Path, t):
     palette_one_ab = [];
     palette_two_ab = [];
     for i in range(len(palette_rgb)):
-        if palette_l[i] < 30:
+        if palette_l[i] < 28:
             palette_one.append(palette_rgb[i])
             palette_one_lab.append(rgb_2_lab(palette_rgb[i]))
             palette_one_ab.append(rgb_2_ab(palette_rgb[i]));
 
-        elif palette_l[i] > 30:
+        elif palette_l[i] > 28:
             palette_two.append(palette_rgb[i]);
             palette_two_lab.append(rgb_2_lab(palette_rgb[i]));
             palette_two_ab.append(rgb_2_ab(palette_rgb[i]));
@@ -93,7 +96,7 @@ def Get_Palette_(palette_rgb,weights,save_Path, t):
     #
     # for i in range(len_colors1):
     #     colors2 = np.delete(colors2, 0, 0);
-    if len(palette_one) >1:
+    if len(palette_one) >   1:
         for i in range(len(colors1)):
             color = colors1[i];
             color = np.array(color)
@@ -158,7 +161,6 @@ def Get_Palette_(palette_rgb,weights,save_Path, t):
     if len(palette_one) > 1:
         colors_1, weights_new_1 = Get_Tree_Root(colors1, weights_1, palette_rgb_five);
     else:
-        print("0000000000000000000000")
         colors_1 = colors1;
         colors_1 = list(colors_1)
         weights_new_1 = weights_1;
@@ -169,15 +171,11 @@ def Get_Palette_(palette_rgb,weights,save_Path, t):
     weights_1 = weights_new_1;
     weights_2 = weights_new_2;
 
-    print(colors_1)
-    print(colors_2)
     colors_1.extend(colors_2);
     weights_new_1.extend(weights_new_2);
     colors = np.array(colors_1);
     weights_new_1 = np.array(weights_new_1);
 
-    print("222222222222222222222222222");
-    print(len(colors));
     if len(palette_one) == 2:
         if distance_num(palette_one_ab[0],palette_one_ab[1]) < 40:
             color_an = (palette_one[0] + palette_one[1]) / 2;
@@ -217,10 +215,10 @@ def Get_Palette_(palette_rgb,weights,save_Path, t):
         Image.fromarray((vertices_image).round().astype(np.uint8)).save(
             save_Filename);
     if t == 2:
-        with open("colors3.txt", 'a') as file_handle:
+        with open(save_Path +"\colors3.txt", 'a') as file_handle:
             file_handle.write(str(colors))
             file_handle.write('\n')
-        with open("weights_new3.txt", 'a') as file_handle:
+        with open(save_Path +"\weights_new3.txt", 'a') as file_handle:
             file_handle.write(str(weights_new_1))
             file_handle.write('\n')
 
@@ -229,10 +227,10 @@ def Get_Palette_(palette_rgb,weights,save_Path, t):
         Image.fromarray((vertices_image).round().astype(np.uint8)).save(
             save_Filename);
     if t == 3:
-        with open("colors4.txt", 'a') as file_handle:
+        with open(save_Path +"\colors4.txt", 'a') as file_handle:
             file_handle.write(str(colors))
             file_handle.write('\n')
-        with open("weights_new4.txt", 'a') as file_handle:
+        with open(save_Path +"\weights_new4.txt", 'a') as file_handle:
             file_handle.write(str(weights_new_1))
             file_handle.write('\n')
 

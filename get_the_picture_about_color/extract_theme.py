@@ -51,7 +51,7 @@ def extract_theme(I,k,sigma,discard_black):
             C_new.append(C[i,:]);
 
     C_new = np.array(C_new);
-
+    weights = weights[0:k];
     return C_new , weights;
 
 

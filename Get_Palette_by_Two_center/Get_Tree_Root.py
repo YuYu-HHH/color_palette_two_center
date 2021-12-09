@@ -12,7 +12,6 @@ def Get_Tree_Root(result_palettes, result_weights, palette_rgb_five):
 
 
 
-
         palettes1_one, palettes1_two, weights1_one, weights1_two, return1_num = Broken_down_further_by_Color_Depth(
             result_palette,result_weight);
         if return1_num == 1:

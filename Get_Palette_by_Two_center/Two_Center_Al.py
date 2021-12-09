@@ -16,6 +16,8 @@ class Colors:
         return self.colors;
 
     def two_center_one(self ,palettes,yes):
+        if len(palettes) > 8:
+            yes = 0;
         if yes == 1:
             self.colors.append(palettes);
         elif yes == 0:
@@ -24,12 +26,14 @@ class Colors:
                 self.two_center_one(pixels_one, yes);
                 self.two_center_one(pixels_two, yes);
 
+                # print(yes)
+
     def two_center_Al(self,palettes):
         pixels_one,pixels_two,pixels_one_ab,pixels_two_ab = self.Get_Two_Center(palettes);
-        print(pixels_one_ab)
-        print(pixels_two_ab)
+        # print(pixels_one_ab)
+        # print(pixels_two_ab)
         xy1,xy2,yes = self.Verify_color_group_by_distance_LAB(pixels_one_ab,pixels_two_ab);
-        print(yes)
+        # print(yes)
 
         colors = [];
 
@@ -49,7 +53,7 @@ class Colors:
         return pixels_one, pixels_two;
 
     def Get_Two_Center(self,palettes):
-        print(palettes)
+        # print(palettes)
         dis_base = 0;
         index_base = np.zeros(2);
         # 1.先找出来两个距离最远的点
