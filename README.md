@@ -5,8 +5,11 @@ Dynamic palette generation
 
 ![image](https://github.com/YuYu-HHH/color_palette_two_center/blob/master/BingWallpaper.jpg)
 
-Precise color
+palette
 ![image](https://github.com/YuYu-HHH/color_palette_two_center/blob/master/222weights-Split_not-vertices.png)
 
-Compressed color
-![image](https://github.com/YuYu-HHH/color_palette_two_center/blob/master/333weights-Split_not-vertices.png)
+
+![image](https://github.com/YuYu-HHH/color_palette_two_center/blob/master/image/DSC00907.JPG)
+
+palette
+![image](https://github.com/YuYu-HHH/color_palette_two_center/blob/master/image/DSC00907_weights-Split_not-vertices.png)
