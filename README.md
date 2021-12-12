@@ -15,3 +15,9 @@ palette
 
 palette
 ![image](https://github.com/YuYu-HHH/color_palette_two_center/blob/master/image/DSC00907_weights-Split_not-vertices.png)
+
+
+![image](https://github.com/YuYu-HHH/color_palette_two_center/blob/master/image/DSC00934.JPG)
+
+palette
+![image](https://github.com/YuYu-HHH/color_palette_two_center/blob/master/image/DSC00934_weights-Split_not-vertices.png)
