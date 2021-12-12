@@ -31,6 +31,8 @@ def Get_Palette_by_Two_center(filename, save_Path):
     with open(save_Path + "\weights_new_vertices.txt", 'a') as file_handle:
         file_handle.write(str(weights))
         file_handle.write('\n')
+    palette_ab = rgbs_2_abs(palette_rgb);
+    draw(palette_ab,100,100,100,save_Path);
     for i in range(3):
         print("555555555555555555555555555555555555555555")
         print(len(palette_rgb))

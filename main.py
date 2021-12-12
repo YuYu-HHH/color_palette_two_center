@@ -13,8 +13,8 @@ import numpy as np
 from Get_Palette_by_Two_center.Get_Palette_by_Two_center import Get_Palette_by_Two_center
 
 if __name__ == '__main__':
-    filename_Path = "E:\gwu-chahua.jpg";
-    filename = "gwu-chahua"
+    # filename_Path = "E:\gwu-chahua.jpg";
+    # filename = "gwu-chahua"
     # filename_Path = "E:\BingWallpaper.jpg";
     # filename = "BingWallpaper";
     # filename_Path = "E:\out.png";
@@ -22,11 +22,14 @@ if __name__ == '__main__':
     # filename_Path = "E:\DSC01270.jpg"
     # filename = "DSC01270"
 
-    filename_Path = "E:\DSC00904.JPG"
-    filename = "DSC00904"
+    # filename_Path = "E:\DSC00904.JPG"
+    # filename = "DSC00904"
 
     # filename_Path = "E:\DSC00907.JPG"
     # filename = "DSC00907"
+
+    filename_Path = "E:\DSC00934.JPG"
+    filename = "DSC00934"
 
     save_Path1 = "E:\Save_Path"
 

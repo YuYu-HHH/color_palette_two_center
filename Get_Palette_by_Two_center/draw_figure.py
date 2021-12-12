@@ -34,8 +34,8 @@ def draw_figure_save(palette_lab,x1,y1,radius,i,k,t, save_Path):
     plt.scatter(x, y)
     a = np.arange(x1 - radius, x1 + radius, 0.001)
     b = np.sqrt(np.power(radius, 2) - np.power((a - x1), 2)) + y1
-    plt.plot(a, b, color='r', linestyle='-')
-    plt.plot(a, -b, color='r', linestyle='-')
+    # plt.plot(a, b, color='r', linestyle='-')
+    # plt.plot(a, -b, color='r', linestyle='-')
     plt.scatter(0, 0, c='b', marker='o')
     plt.grid(True);
     one = os.path.join(save_Path,str(t) + "plot_picture_one_is"+str(i));
